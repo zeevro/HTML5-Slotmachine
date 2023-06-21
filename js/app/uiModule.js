@@ -4,9 +4,6 @@ define(['jquery', 'reelModule'], function($, reelModule) {
 		$('#button-spin').click(function() {
 			reelModule.reelmodulespin();
 		});
-		$('.button-hold').click(function() {
-			reelModule.reelmodulehold($(this), $(this).attr("value"));
-		});
 	};
 
 	return {

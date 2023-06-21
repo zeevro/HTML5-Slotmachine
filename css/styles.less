@@ -30,7 +30,7 @@ body {
 		height: 360px;
 		position: absolute;
 		overflow: hidden;
-		
+
 		background: url(../img/reel-container-fx.png);
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
@@ -194,7 +194,7 @@ body {
 		overflow: hidden;
 		display: inline-block;
 		cursor: pointer;
-		
+
 		font-family: "Verdana", Geneva, sans-serif;
 		font-size: 16px;
 
@@ -271,63 +271,5 @@ body {
 			background-color: orange;
 			box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.2), inset 0px -5px 0px 0px rgba(0,0,0,0.3), inset 0px 2px 0px 0px rgba(255,255,255,0.5), 0 0 6px orange;
 		}
-	}
-
-	.button-hold {
-		margin: 0 0 0 15px;
-		background-color: #ccc;
-		float: left;
-	}
-
-	.button-hold-blink {
-		-webkit-animation: button-hold-blinker 0.5s cubic-bezier(1.0,0,0,1.0) 0 infinite normal;
-		-moz-animation: button-hold-blinker 0.5s cubic-bezier(1.0,0,0,1.0) 0 infinite normal;
-		-o-animation: button-hold-blinker 0.5s cubic-bezier(1.0,0,0,1.0) 0 infinite normal;
-		animation: button-hold-blinker 0.5s cubic-bezier(1.0,0,0,1.0) 0 infinite normal;
-	}
-
-	@-webkit-keyframes button-hold-blinker {
-		from {
-			background-color: #ccc;
-			-webkit-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.2), inset 0px -5px 0px 0px rgba(0,0,0,0.3), inset 0px 2px 0px 0px rgba(255,255,255,0.5);
-		} to {
-			background-color: #55aacc;
-			-webkit-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.2), inset 0px -5px 0px 0px rgba(0,0,0,0.3), inset 0px 2px 0px 0px rgba(255,255,255,0.5), 0 0 6px #55aacc;
-		}
-	}
-	@-moz-keyframes button-hold-blinker {
-		from {
-			background-color: #ccc;
-			-moz-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.2), inset 0px -5px 0px 0px rgba(0,0,0,0.3), inset 0px 2px 0px 0px rgba(255,255,255,0.5);
-		} to {
-			background-color: #55aacc;
-			-moz-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.2), inset 0px -5px 0px 0px rgba(0,0,0,0.3), inset 0px 2px 0px 0px rgba(255,255,255,0.5), 0 0 6px #55aacc;
-		}
-	}
-	@-o-keyframes button-hold-blinker {
-		from {
-			background-color: #ccc;
-		} to {
-			background-color: #55aacc;
-		}
-	}
-	@keyframes button-hold-blinker {
-		from {
-			background-color: #ccc;
-			box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.2), inset 0px -5px 0px 0px rgba(0,0,0,0.3), inset 0px 2px 0px 0px rgba(255,255,255,0.5);
-		} to {
-			background-color: #55aacc;
-			box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.2), inset 0px -5px 0px 0px rgba(0,0,0,0.3), inset 0px 2px 0px 0px rgba(255,255,255,0.5), 0 0 6px #55aacc;
-		}
-	}
-
-	.button-holding {
-		background-color: #55aacc;
-		-webkit-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.2), inset 0px -5px 0px 0px rgba(0,0,0,0.3), inset 0px 2px 0px 0px rgba(255,255,255,0.5), 0 0 6px #55aacc;
-	}
-
-	.button-hold-disable {
-		background-color: #ff8080;
-		-webkit-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.2), inset 0px -5px 0px 0px rgba(0,0,0,0.3), inset 0px 2px 0px 0px rgba(255,255,255,0.5), 0 0 6px #ff8080;	
 	}
 }
