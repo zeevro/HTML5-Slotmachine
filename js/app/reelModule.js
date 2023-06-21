@@ -1,4 +1,4 @@
-define(['jquery', 'rngModule', 'audioModule'], function($, rngModule, audioModule) {
+define(['jquery', 'rngModule', 'audioModule', 'printerModule'], function($, rngModule, audioModule, printerModule) {
 	reelContainer = $('#reel-container');
 
 	var reelModuleInitialize = function() {
@@ -53,6 +53,7 @@ define(['jquery', 'rngModule', 'audioModule'], function($, rngModule, audioModul
 			var reelNumbers = rngModule.rngmodulegetnumbers(),
 				timeoutMapping = [1500, 2250, 3000];
 			$('#button-spin').removeClass('button-spin-blink');
+			printerModule.printermodulereset();
 			reelContainer.children('div').each(function(index) {
 				var reelEl = $(this);
 				reelSpin[index] = true;
@@ -76,6 +77,7 @@ define(['jquery', 'rngModule', 'audioModule'], function($, rngModule, audioModul
 							if(!reelSpinning[0] && !reelSpinning[1] && !reelSpinning[2]) {
 								$('#button-spin').addClass('button-spin-blink');
 								console.log('app: reels stopped spinning', reelNumbers);
+								printerModule.printermoduleprint();
 							}
 						}
 					}

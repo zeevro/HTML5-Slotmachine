@@ -5,7 +5,8 @@ require.config({
 		'rngModule': 'app/rngModule',
 		'reelModule' : 'app/reelModule',
 		'uiModule' : 'app/uiModule',
-		'audioModule' : 'app/audioModule'
+		'audioModule' : 'app/audioModule',
+		'printerModule' : 'app/printerModule'
 	},
 	waitSeconds: 15
 });

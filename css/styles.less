@@ -273,3 +273,49 @@ body {
 		}
 	}
 }
+
+#printer-img {
+	height: 500px;
+	background-image: url(../img/Inkjet_Printer_clip_art.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+
+	#printed-page {
+		width: 286px;
+		height: 180px;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		overflow: hidden;
+
+		-webkit-transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
+		-o-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+
+		left: 210px;
+		top: 260px;
+		transform-origin: center;
+		transform: rotateX(60deg) rotateY(-5deg) rotateZ(55deg);
+
+		#printed-content {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			position: relative;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-image: url(../img/icons/apple.png);
+			left: -100%;
+		}
+
+		#printed-content.printed {
+			-webkit-transition: -webkit-transform 2.5s linear;
+			-moz-transition: -moz-transform 2.5s linear;
+			-o-transition: -o-transform 2.5s linear;
+			transition: transform 2.5s linear;
+			transform: translate(100%);
+		}
+	}
+}
