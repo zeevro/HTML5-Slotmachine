@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg">
-	<filter id="printerFilter" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
-		<feColorMatrix type="saturate" values="0.5" in="SourceGraphic" result="fadedSource"/>
-		<feTurbulence type="turbulence" baseFrequency="0.15 0" numOctaves="4" seed="3" stitchTiles="stitch" result="turbulence"/>
-		<feColorMatrix type="saturate" values="0" in="turbulence" result="printerLines"/>
-		<feComposite in="fadedSource" in2="printerLines" operator="out"/>
-	</filter>
-</svg>
