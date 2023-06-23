@@ -7,10 +7,17 @@ define([], function() {
 	var printerModuleInitialize = function() {
 	};
 
-	var printerModulePrint = function() {
-		filter_saturation.setAttribute('values', Math.random() * 0.6)
-		filter_turbulence.setAttribute('seed', Math.random() * 100000)
+	var printerModulePrint = function(mangled) {
 		printer_image.setAttribute('href', 'https://cataas.com/cat?width=286&height=180');
+
+		if (mangled) {
+			printer_image.setAttribute('filter', 'url(#printerFilter)');
+			filter_saturation.setAttribute('values', Math.random() * 0.6);
+			filter_turbulence.setAttribute('seed', Math.random() * 100000);
+		} else {
+			printer_image.setAttribute('filter', '');
+		}
+
 		printed_content.classList.add('printed');
 	};
 

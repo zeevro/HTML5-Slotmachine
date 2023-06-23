@@ -48,6 +48,12 @@ define(['jquery', 'rngModule', 'audioModule', 'printerModule'], function($, rngM
 		console.log('app: reels initialized');
 	};
 
+	spinResult = function() {
+		var reelImages = $.makeArray(reelContainer.children('div').map((n, el) => getComputedStyle(el.children[reelPosition[n]-1]).backgroundImage.match(/\w+(?=\.svg)/)));
+		var mangled = (reelImages.indexOf('C') + reelImages.indexOf('M') + reelImages.indexOf('Y')) < 3;
+		printerModule.printermoduleprint(mangled);
+	}
+
 	var reelModuleSpin = function() {
 		if(!reelSpinning[0] && !reelSpinning[1] && !reelSpinning[2]) {
 			var reelNumbers = rngModule.rngmodulegetnumbers(),
@@ -77,7 +83,7 @@ define(['jquery', 'rngModule', 'audioModule', 'printerModule'], function($, rngM
 							if(!reelSpinning[0] && !reelSpinning[1] && !reelSpinning[2]) {
 								$('#button-spin').addClass('button-spin-blink');
 								console.log('app: reels stopped spinning', reelNumbers);
-								printerModule.printermoduleprint();
+								spinResult(reelNumbers);
 							}
 						}
 					}
