@@ -1,3 +1,8 @@
+@font-face {
+	font-family: 'MF Enigma';
+	src: url(../font/mf-Enigma-400.woff);
+}
+
 body {
 	background-color: #151515;
 }
@@ -184,6 +189,10 @@ body {
 	border-bottom: 1px solid #000;
 	border-left: 1px solid #000;
 
+	.banner {
+		height: 100px;
+	}
+
 	.button {
 		width: auto;
 		height: auto;
@@ -194,8 +203,9 @@ body {
 		display: inline-block;
 		cursor: pointer;
 
-		font-family: "Verdana", Geneva, sans-serif;
-		font-size: 16px;
+		font-family: 'MF Enigma', Verdana, Geneva, sans-serif;
+		direction: rtl;
+		font-size: xx-large;
 
 		-webkit-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.2), inset 0px -5px 0px 0px rgba(0,0,0,0.3), inset 0px 2px 0px 0px rgba(255,255,255,0.5);
 		-moz-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.2), inset 0px -5px 0px 0px rgba(0,0,0,0.3), inset 0px 2px 0px 0px rgba(255,255,255,0.5);
@@ -206,8 +216,7 @@ body {
 		border-radius: 5px;
 
 		div {
-			padding: 10px 20px 12px 20px;
-			color: rgba(0,0,0,0.7);
+			padding: 20px 30px 20px 30px;
 			text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
 		}
 	}
@@ -220,12 +229,12 @@ body {
 		box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.2), inset 0px -2px 0px 0px rgba(0,0,0,0.3), inset 0px 2px 0px 0px rgba(255,255,255,0.5);
 
 		div {
-			padding-bottom: 9px;
+			padding-bottom: 17px;
 		}
 	}
 
 	.button-spin {
-		margin: 0 15px 0 0;
+		margin: 10px 15px 0 0;
 		background-color: #ccc;
 		float: right;
 	}
