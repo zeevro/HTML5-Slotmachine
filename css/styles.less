@@ -168,7 +168,6 @@ body {
 	width: 680px;
 	height: auto;
 	margin: 0 auto;
-	padding: 15px 0 15px 0;
 	position: relative;
 	overflow: hidden;
 	background-color: #111;
@@ -270,15 +269,16 @@ body {
 }
 
 #printer-img {
-	width: 500px;
+	margin: 25px auto 0 auto;
+	width: 340px;
 	height: 500px;
-	background-image: url(../img/Inkjet_Printer_clip_art.svg);
+	background-image: url(../img/CANON.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 
-	#printed-page {
-		width: 286px;
-		height: 180px;
+	#printed-page-container {
+		width: 255px;
+		height: 360px;
 		margin: 0;
 		padding: 0;
 		position: relative;
@@ -289,10 +289,10 @@ body {
 		-o-transform-style: preserve-3d;
 		transform-style: preserve-3d;
 
-		left: 210px;
-		top: 260px;
-		transform-origin: center;
-		transform: rotateX(60deg) rotateY(-5deg) rotateZ(55deg);
+		top: 85px;
+		margin: auto;
+		transform-origin: top;
+		transform: perspective(840px) rotateX(75deg);
 
 		#printed-content {
 			width: 100%;
@@ -301,7 +301,7 @@ body {
 			padding: 0;
 			position: relative;
 			background-color: whitesmoke;
-			left: -100%;
+			top: -100%;
 		}
 
 		#printed-content.printed {
@@ -309,16 +309,7 @@ body {
 			-moz-transition: -moz-transform 2.5s linear;
 			-o-transition: -o-transform 2.5s linear;
 			transition: transform 2.5s linear;
-			transform: translate(100%);
+			transform: translateY(100%);
 		}
 	}
-}
-
-.price {
-	width: 180px;
-	height: 100px;
-	background-image: url(../img/banner.jpg);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: 90%;
 }

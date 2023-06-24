@@ -73,19 +73,19 @@
 		<section id="reel-buttons" class="reel-buttons">
 			<img class="banner" src="img/banner2.png"/>
 			<div id="button-spin" class="button button-spin" ontouchstart=""><div>לחץ כאן לסיבוב!</div></div></div>
-			<div id="printer-img">
-				<div id="printed-page">
-					<svg id="printed-content">
-						<filter id="printerFilter" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
-							<feColorMatrix type="saturate" values="0.5" in="SourceGraphic" result="fadedSource" id="printerFilterSaturation"/>
-							<feTurbulence type="turbulence" baseFrequency="0.15 0" numOctaves="4" seed="3" stitchTiles="stitch" result="turbulence" id="printerFilterTurbulence"/>
-							<feColorMatrix type="saturate" values="0" in="turbulence" result="printerLines"/>
-							<feComposite in="fadedSource" in2="printerLines" operator="out"/>
-						</filter>
-						<image width="100%" height="100%" href="https://cataas.com/cat?width=286&height=180" filter="url(#printerFilter)" id="printerImage"/>
-					</svg>
-				</div>
-			</div>
 		</section>
+		<div id="printer-img">
+			<div id="printed-page-container">
+				<svg id="printed-content">
+					<filter id="printerFilter" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+						<feColorMatrix type="saturate" values="0.5" in="SourceGraphic" result="fadedSource" id="printerFilterSaturation"/>
+						<feTurbulence type="turbulence" baseFrequency="0 0.15" numOctaves="4" seed="3" stitchTiles="stitch" result="turbulence" id="printerFilterTurbulence"/>
+						<feColorMatrix type="saturate" values="0" in="turbulence" result="printerLines"/>
+						<feComposite in="fadedSource" in2="printerLines" operator="out"/>
+					</filter>
+					<image width="100%" height="100%" href="https://cataas.com/cat?width=255&height=360" filter="url(#printerFilter)" id="printerImage"/>
+				</svg>
+			</div>
+		</div>
 	</body>
 </html>
