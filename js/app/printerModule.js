@@ -8,8 +8,6 @@ define([], function() {
 	};
 
 	var printerModulePrint = function(mangled) {
-		printer_image.setAttribute('href', 'https://cataas.com/cat?width=286&height=180');
-
 		if (mangled) {
 			printer_image.setAttribute('filter', 'url(#printerFilter)');
 			filter_saturation.setAttribute('values', Math.random() * 0.6);
@@ -22,6 +20,7 @@ define([], function() {
 	};
 
 	var printerModuleReset = function() {
+		printer_image.setAttribute('href', printer_image.href.baseVal);
 		printed_content.classList.remove('printed');
 	};
 
