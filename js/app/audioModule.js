@@ -10,6 +10,10 @@ define(['jquery'], function($) {
 		reelStop = new Audio('./audio/reelStop.mp3');
 		reelStop.volume = 0.75;
 		reelStop.loop = false;
+
+		printer = new Audio('./audio/printer.mp3');
+		printer.volume = 0.65;
+		printer.loop = false;
 	};
 
 	var audioModulePlayAudio = function(playAudio) {
@@ -22,7 +26,10 @@ define(['jquery'], function($) {
 			// break;
 			case 'reelStop':
 				reelStop.play();
-			break;
+				break;
+			case 'printer':
+				printer.play();
+				break;
 		}
 	};
 

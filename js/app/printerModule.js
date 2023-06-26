@@ -1,4 +1,4 @@
-define([], function() {
+define(['audioModule'], function(audioModule) {
 	printed_page_container = document.getElementById('printed-page-container');
 	printed_content = document.getElementById('printed-content');
 	printer_image = document.getElementById('printerImage');
@@ -42,6 +42,8 @@ define([], function() {
 		}
 
 		printed_content.classList.add('printed');
+
+		audioModule.audiomoduleplayaudio('printer');
 	};
 
 	var printerModuleReset = function() {

@@ -51,7 +51,9 @@ define(['jquery', 'rngModule', 'audioModule', 'printerModule'], function($, rngM
 	spinResult = function() {
 		var reelImages = $.makeArray(reelContainer.children('div').map((n, el) => getComputedStyle(el.children[reelPosition[n]-1]).backgroundImage.match(/\w+(?=\.svg)/)));
 		var mangled = (reelImages.indexOf('C') + reelImages.indexOf('M') + reelImages.indexOf('Y')) < 3;
-		printerModule.printermoduleprint(mangled);
+		setTimeout(function() {
+			printerModule.printermoduleprint(mangled);
+		}, 300);
 	}
 
 	var reelModuleSpin = function() {
