@@ -76,14 +76,14 @@
 		</section>
 		<div id="printer-img">
 			<div id="printed-page-container">
-				<svg id="printed-content">
-					<filter id="printerFilter" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
-						<feColorMatrix type="saturate" values="0.5" in="SourceGraphic" result="fadedSource" id="printerFilterSaturation"/>
-						<feTurbulence type="turbulence" baseFrequency="0 0.15" numOctaves="4" seed="3" stitchTiles="stitch" result="turbulence" id="printerFilterTurbulence"/>
-						<feColorMatrix type="saturate" values="0" in="turbulence" result="printerLines"/>
-						<feComposite in="fadedSource" in2="printerLines" operator="out"/>
+				<svg id="printed-content" viewBox="0 0 100 100" preserveAspectRatio="none">
+					<filter width="100" height="100" id="printerFilter" filterUnits="objectBoundingBox" primitiveUnits="objectBoundingBox" color-interpolation-filters="linearRGB">
+						<feColorMatrix width="100" height="100" type="saturate" values="0.5" in="SourceGraphic" result="fadedSource" id="printerFilterSaturation"/>
+						<feTurbulence width="100" height="100" type="turbulence" baseFrequency="0 0.15" numOctaves="4" seed="3" stitchTiles="stitch" result="turbulence" id="printerFilterTurbulence"/>
+						<feColorMatrix width="100" height="100" type="saturate" values="0" in="turbulence" result="printerLines"/>
+						<feComposite width="100" height="100" in="fadedSource" in2="printerLines" operator="out"/>
 					</filter>
-					<image href="img/paper1.png" preserveAspectRatio="none" filter="url(#printerFilter)" id="printerImage"/>
+					<image width="100" height="100" preserveAspectRatio="none" filter="url(#printerFilter)" id="printerImage"/>
 				</svg>
 			</div>
 		</div>
