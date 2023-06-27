@@ -25,6 +25,11 @@ define(['audioModule'], function(audioModule) {
 	];
 
 	var printerModuleInitialize = function() {
+		[bad_papers, good_papers].forEach(arr => {
+			arr.forEach(url => {
+				new Image().src = url;
+			});
+		});
 	};
 
 	var printerModulePrint = function(mangled) {
